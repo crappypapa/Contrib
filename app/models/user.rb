@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :groups, foreign_key: :author_id
   has_many :contributions, foreign_key: :author_id, dependent: :destroy
 
-  validates :name, :email, presence: true, length: { minimum: 3, maximum: 25 }
+  validates :name, :email, presence: true, length: { minimum: 3, maximum: 30 }
 
 end
