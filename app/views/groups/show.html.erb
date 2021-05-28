@@ -1,0 +1,12 @@
+
+      <div class='w-100 bg-white rounded p-2 mb-2 border shadow d-flex'>
+        <div class='w-100'>
+          <div class='d-flex justify-content-between mb-2'>
+            <span class='h4'>Name: <%= @group.name %></span>
+          
+          </div>
+          <p class="m-0">Created by: <span class='font-italic'><%= @group.author.name %></span></p>
+          <p>Time Created: <%= @group.created_at.to_formatted_s(:long)  %></p>
+        </div>
+      </div>
+   
