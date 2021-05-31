@@ -1,12 +1,29 @@
+<% content_for(:title, "All Groups") %>
 
-      <div class='w-100 bg-white rounded p-2 mb-2 border shadow d-flex'>
-        <div class='w-100'>
-          <div class='d-flex justify-content-between mb-2'>
-            <span class='h4'>Name: <%= @group.name %></span>
+
+<% @group.contributions.each do |contribution| %>
+    <div class="col">
+      <div class="card text-white bg-dark h-100">
+        <div class="col-md-5">
+          <%= display_image(contribution)%>
+          <div class="col-md-7">
+          <div class="card-body">
+            <h3>Title: <%= contribution.name %></h3>
+            <p class= 'card-title'> Author: <%= contribution.author.username %></p>
+            <p class="card-text">Amount: <%= contribution.amount %></p>
           
+            <p class="card-text"><small class="text-muted">Created on: <%= contribution.created_at.day %>-<%= contribution.created_at.month %>-<%= contribution.created_at.year %> </small></p>
           </div>
-          <p class="m-0">Created by: <span class='font-italic'><%= @group.author.name %></span></p>
-          <p>Time Created: <%= @group.created_at.to_formatted_s(:long)  %></p>
         </div>
       </div>
-   
+    </div>  
+    </div>
+      <% end %>
+  </div>
+</div>
+</div>
+
+
+<div class=" text-center">
+    <%= link_to 'Add Contribution', new_contribution_path, class: "btn btn-primary text-center" %>
+</div>

@@ -1,13 +1,7 @@
+<% content_for(:title, "All Groups") %>
+<%= show_groups('list',@groups)  %>
 
-  <div>
-    <%= link_to 'Create new group', new_group_path %>
-  </div>
-  <% @groups.each do |group| %>
-    <%= link_to group_path(group) do %>
-      <div>
-        <p><%= group.id%> </p>
-        <p><%= group.name %></p>
-        <p >Created by:<%= group.author.name %></p>
-      </div>
-    <% end %>
-  <% end %>
+<div class=" text-center">
+    <%= link_to 'Add Group', new_group_path, class: "btn btn-primary text-center" %>
+</div>
+
