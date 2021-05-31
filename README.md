@@ -1,21 +1,22 @@
-# Ruby on Rails Capstone Project: Group your expenses
+# Ruby on Rails Capstone Project: Contri_B
 
-  - This is the capstone project of the Microverse Ruby on Rails curriculum. This capstone project is completed as part of the Microverse remote software developement curriculum using the pair programming approach.
+  - This is the capstone project of the Microverse Ruby on Rails curriculum.
 
-  - In this project I created an expense log app where users can create an account with their username and add expenses which can be grouped and ungrouped into the names of their choice.
+  - In this project I created an contribution tracking app where users can create an account with their username and add contributions which can be grouped and ungrouped into the names of their choice.
 
-  - Users can also view each expenses in each group.
+  - Users can view contributions in each group.
 
-  - Users can track the total amount of their expenses.
+  - Users can track the total amount of their contributions.
 
-  - This project is built with the MVP approach.
 
-  Some of the advanced concepts explored in this project includes.
-  - Working with advanced associations, many-to-many relationships.
+    Some of the advanced concepts explored in this project includes.
+
   - Basic Authentication using just username
-  - Used RSpec as the test suit with the help of shoulda-matchers and capybara for effective testing. Unit, Functional and integration testing was done.
 
-  ![screenshot](./app/assets/images/group-it.png)
+  
+  - Used RSpec as the test suite with the help of shoulda-matchers and capybara for effective testing. Unit, Functional and integration testing was done.
+
+  ![screenshot](./app/assets/images/rorcon.png)
 
 ## Built With
   - Ruby,
@@ -27,48 +28,51 @@
 
 ## Live Demo
 
-  - [Live Demo Link](https://group-it-capstone.herokuapp.com)
+  - [Live Demo Link](https://contri-b.herokuapp.com/)
 
-### Prerequisites
+### Installation and Setup
 
-  - Ruby: 2.6.5 Rails: 6.0.3.2
+  - Clone repo to your local machine with the following steps:
 
-### Install and Setup
+    ```git clone https://github.com/crappypapa/Contrib.git```
 
-  - Clone repo to your local
-    - git clone https://github.com/somoye123/Group-it.git
-    - cd Group-it
+    ```cd Contrib```
 
   - Install gems with:
-    - bundle install
+
+     ```bundle install```
 
   - Setup database with:
-    - rails db:migrate
+
+     ```rails db:create```
+     ```rails db:migrate```
 
 ### Usage
 
-  - Start server with:
-    - rails server
+  - Start a rails server in the terminal with:
 
-    - Open http://localhost:3000/ in your browser.
+    ```rails s```
+
+  - Open ```http://localhost:3000``` in your browser.
 
 ### Run tests
-  - Run:
-    - rpsec
+  - Run in your terminal the code:
+
+    ```rspec --format documentation```
 
 ## Author
 
-  👤 **Somoye Ayotunde**
+  👤 **Olaoluwa Soladoye**
 
-  - Github:[@somoye123](https://github.com/somoye123)
-  - Twitter:[@ayotunde_197](https://twitter.com/ayotunde_197)
-  - LinkedIn:[Somoye Ayotunde](https://www.linkedin.com/in/somoye-ayotunde-03a471161)
+- Github: [@crappypapa](https://github.com/crappypapa)
+- Twitter: [@_laoluwa](https://twitter.com/_laoluwa)
+- Linkedin: [Olaoluwa](https://www.linkedin.com/in/olaoluwa-soladoye)
 
 ## 🤝 Contributing
 
   - Contributions, issues and feature requests are welcome!
 
-  - Feel free to check the [issues page](https://github.com/somoye123/Group-it/issues)
+  - Feel free to check the [issues page](https://github.com/crappypapa/Contrib/issues)
 
 ## Show your support
 
