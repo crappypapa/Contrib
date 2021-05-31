@@ -1,40 +1,36 @@
 class ContributionsController < ApplicationController
+  before_action :require_user
 
   def index
-    return if current_user.expenses.size.zero?
+    return if current_user.contributions.size.zero?
 
-    @contributions = current_user.contribution.desc.select { |contri| contri.groups.exists? }
+    @contributions = current_user.contributions.desc.select { |contribution| contribution.groups.exists? }
   end
-
 
   def external
-    return if current_user.expenses.size.zero?
+    return if current_user.contributions.size.zero?
 
-    @expenses = current_user.expenses.desc.reject { |expense| expense.groups.exists? }
+    @contributions = current_user.contributions.desc.reject { |contribution| contribution.groups.exists? }
   end
 
-  
   def new
     @contribution = Contribution.new
     @groups = current_user.groups
   end
 
   def create
-    @contribution = current_user.contribution.build(contribution_params) 
+    @contribution = current_user.contributions.build(contribution_params)
     @group = Group.find_by(id: group_params[:group_id])
     @contribution.groups << @group unless @group.nil?
 
     if @contribution.save
-      flash[:success] = 'Contribution added'
-      redirect_to contribution_path
+      flash[:success] = 'Contribution Added!'
+      redirect_to contributions_path
     else
       flash.now[:error] = @contribution.errors.full_messages
       render :new
     end
   end
-
-
-
 
   private
 
@@ -45,5 +41,4 @@ class ContributionsController < ApplicationController
   def group_params
     params.require(:contribution).permit(:group_id)
   end
-
 end

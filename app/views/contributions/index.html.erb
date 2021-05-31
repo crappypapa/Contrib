@@ -1,0 +1,7 @@
+<% content_for(:title, "My contributions") %>
+
+<%= show_contributions('list',@contributions)  %>
+
+<div class=" text-center">
+    <%= link_to 'Add Contribution', new_contribution_path, class: "btn btn-primary text-center" %>
+</div>
