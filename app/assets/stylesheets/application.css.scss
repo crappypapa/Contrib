@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+$base-color: #a8a8a8;
+$color: #3778c2;
+
+.total {
+  // display: flex;
+  justify-content: end;
+  background-color:$base-color;
+  padding: 1.5rem;
+
+  span:first-child {
+    color: $color;
+  }
+
+  span:last-child {
+    font-weight: bold;
+  }
+}
+
+.group-img {
+  width: 100%;
+   margin-top: 1rem;
+  display: block;
+}
+
