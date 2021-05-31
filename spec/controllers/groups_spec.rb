@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe GroupsController, type: :controller do
- 
   describe 'GET #index' do
     before do
       User.create(username: 'Olaoluwa')

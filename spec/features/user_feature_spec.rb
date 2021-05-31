@@ -41,7 +41,7 @@ feature 'Navigation through the application pages' do
     visit '/login'
     fill_in 'Username', with: 'Olaoluwa'
     click_button 'Log in'
-    
+
     expect(page).to have_content 'Contributions'
     expect(page).to have_content 'Ungrouped Contributions'
     expect(page).to have_content 'Contribution Groups'

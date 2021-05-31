@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe ContributionsController, type: :controller do
- 
   describe 'GET #index' do
     before do
       User.create(username: 'Olaoluwa')
@@ -24,5 +23,4 @@ RSpec.describe ContributionsController, type: :controller do
     before { get :new }
     it { should redirect_to(new_user_path) }
   end
-  
 end

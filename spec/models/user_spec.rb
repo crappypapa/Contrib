@@ -14,7 +14,6 @@ require 'rails_helper'
 #   end
 # end
 
-
 RSpec.describe User, type: :model do
   let(:user) { User.create(username: 'shaher') }
   let(:invalid_user) { User.create(username: '') }

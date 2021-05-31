@@ -25,6 +25,8 @@ class GroupsController < ApplicationController
     if current_user.groups.include? @group
       @contributions = nil
       @contributions = @group.contributions.desc if @group.contributions.exists?
+    else
+      redirect_to groups_path
     end
   end
 

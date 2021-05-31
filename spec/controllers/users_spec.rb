@@ -7,5 +7,3 @@ RSpec.describe UsersController, type: :controller do
     it { should render_template('new') }
   end
 end
-
-
