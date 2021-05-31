@@ -7,7 +7,7 @@ class ContributionsController < ApplicationController
     @contributions = current_user.contributions.desc.select { |contribution| contribution.groups.exists? }
   end
 
-  def external
+  def ungrouped
     return if current_user.contributions.size.zero?
 
     @contributions = current_user.contributions.desc.reject { |contribution| contribution.groups.exists? }
