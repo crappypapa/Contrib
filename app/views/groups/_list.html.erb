@@ -1,0 +1,24 @@
+<div class="container-fluid ">
+    <div class="row row-cols-1 row-cols-md-3 g-4" > 
+
+    <% obj.each do |group| %>
+    <%= link_to(group) do %>
+    <div class="col">
+      <div class="card text-white bg-dark h-100">
+        <div class="col-md-5">
+          <%= show_group_image(group)%>
+          <div class="col-md-7">
+          <div class="card-body">
+            <h5><strong>Group Name: </strong> <%= group.name %></h5>
+          
+            <p class="card-text"><small class="text-muted">Created on: <%= group.created_at.day %>-<%= group.created_at.month %>-<%= group.created_at.year %> </small></p>
+          </div>
+        </div>
+      </div>
+    </div>  
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+</div>
+</div>
