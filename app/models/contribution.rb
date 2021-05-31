@@ -3,9 +3,8 @@ class Contribution < ApplicationRecord
   has_many :contribution_groups
   has_many :groups, through: :contribution_groups
 
-  validates :amount, presence: true , numericality: { greater_than: 0 }
-  validates :name, presence: true, length: {minimum: 3, maximum: 30}
-  
-  scope :ordered_desc, -> { includes(:author).order('created_at DESC') }
+  validates :name, presence: true, length: { minimum: 3, maximun: 30 }
+  validates_numericality_of :amount, greater_than: 0, allow_nil: true
 
+  scope :desc, -> { includes(:author).order('created_at DESC') }
 end

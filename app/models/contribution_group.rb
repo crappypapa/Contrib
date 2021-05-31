@@ -1,4 +1,4 @@
 class ContributionGroup < ApplicationRecord
-  belongs_to :group
   belongs_to :contribution
+  belongs_to :group
 end
