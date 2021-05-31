@@ -17,9 +17,8 @@ $base-color: #a8a8a8;
 $color: #3778c2;
 
 .total {
-  // display: flex;
   justify-content: end;
-  background-color:$base-color;
+  background-color: $base-color;
   padding: 1.5rem;
 
   span:first-child {
@@ -33,7 +32,6 @@ $color: #3778c2;
 
 .group-img {
   width: 100%;
-   margin-top: 1rem;
+  margin-top: 1rem;
   display: block;
 }
-
