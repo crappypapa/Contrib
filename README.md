@@ -1,20 +1,20 @@
-# Ruby on Rails Capstone Project: Contri_B
+#  Ruby on Rails Capstone Project: Contri_B
 
   - This is the capstone project of the Microverse Ruby on Rails curriculum.
 
-  - In this project I created an contribution tracking app where users can create an account with their username and add contributions which can be grouped and ungrouped into the names of their choice.
+  - In this project, I created a contribution tracking app where users can create an account with their username and add contributions which can be grouped and ungrouped into the names of their choice.
 
   - Users can view contributions in each group.
 
   - Users can track the total amount of their contributions.
 
 
-    Some of the advanced concepts explored in this project includes.
+    Some of the advanced concepts explored in this project include.
 
   - Basic Authentication using just username
 
   
-  - Used RSpec as the test suite with the help of shoulda-matchers and capybara for effective testing. Unit, Functional and integration testing was done.
+  - Used RSpec as the test suite with the help of shoulda-matchers and capybara for testing. 
 
   ![screenshot](./app/assets/images/rorcon.png)
 
@@ -32,15 +32,15 @@
 
 ### Installation and Setup
 
-  - Clone repo to your local machine with the following steps:
+  - Install and start the project on your local machine with the following steps:
 
     ```git clone https://github.com/crappypapa/Contrib.git```
 
     ```cd Contrib```
 
-  - Install gems with:
+    ```yarn install```
 
-     ```bundle install```
+    ```bundle install```
 
   - Setup database with:
 
@@ -70,7 +70,7 @@
 
 ## 🤝 Contributing
 
-  - Contributions, issues and feature requests are welcome!
+  - Contributions, issues, and feature requests are welcome!
 
   - Feel free to check the [issues page](https://github.com/crappypapa/Contrib/issues)
 
