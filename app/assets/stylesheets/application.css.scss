@@ -13,12 +13,18 @@
  *= require_tree .
  *= require_self
  */
-$base-color: #a8a8a8;
-$color: #3778c2;
+ $color: #a8a8a8;
+ $color2: #5fbf23;
+ $color3: #3778c2;
+
+ body {
+  background-color: #f1f3f2;
+}
 
 .total {
-  justify-content: end;
-  background-color: $base-color;
+ display: flex;
+  justify-content: space-between;
+  background-color: #fff;
   padding: 1.5rem;
 
   span:first-child {
@@ -30,8 +36,30 @@ $color: #3778c2;
   }
 }
 
+.blue-background {
+  background-color: $color3;
+}
+
+
+.white {
+  color: white !important;
+}
+
+
 .group-img {
   width: 100%;
   margin-top: 1rem;
   display: block;
+}
+
+.btn-background {
+  background-color: $color2;
+  padding: 1.5rem;
+}
+
+.button {
+  border: 1px solid white;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
 }

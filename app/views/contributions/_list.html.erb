@@ -14,15 +14,14 @@
     <% obj.each do |contribution| %>
     <div class="col">
       <div class="card text-white bg-dark h-100">
-        <div class="col-md-5">
+        <div class="col-sm-12 col-md-6">
           <%= show_image(contribution)%>
-          <div class="col-md-7">
+          <div class="col-sm-7">
           <div class="card-body">
-            <h3>Title: <%= contribution.name %></h3>
-            <p class= 'card-title'> Author: <%= contribution.author.username %></p>
-            <p class="card-text">Amount: <%= contribution.amount %></p>
-          
-            <p class="card-text"><small class="text-muted">Created on: <%= contribution.created_at.day %>-<%= contribution.created_at.month %>-<%= contribution.created_at.year %> </small></p>
+            <h3><%= contribution.name %></h3>
+           
+            <p class="card-text"> <%= number_to_currency(contribution.amount, precision: 0) %></p>
+            <p class="card-text"><small class="text-muted"> Created on: <%= contribution.created_at.day %>-<%= contribution.created_at.month %>-<%= contribution.created_at.year %> </small></p>
           </div>
         </div>
       </div>
@@ -32,3 +31,5 @@
   </div>
 </div>
 </div>
+
+
