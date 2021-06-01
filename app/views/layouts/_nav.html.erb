@@ -7,34 +7,8 @@
       <span class="icon-bar"></span>
     </button>
     <div class="navbar-collapse collapse navbar-responsive-collapse">
-      <% if logged_in? %>
-      <div  class="d-flex ">
-          <ul class = "justify-content-end list-style-none col-md-8">
-           <li class= 'nav-item btn btn-light mx-2' >
-           <%= link_to "Contributions", contributions_path, class: "white"%></li>
-          <li class= 'nav-item btn btn-light mx-2' ><%= link_to "Ungrouped Contributions", ungrouped_path, class: "white"%></li>
-          <li class= 'nav-item btn btn-light mx-2' ><%= link_to "Contribution Groups", groups_path, class: "white"%></li>
-          </ul>    
-          <ul class= "navbar-right col-md-3">  
-         <li class="btn btn-primary me-md-2"><i class="fa fa-user"></i><%= @current_user.username.present? && @current_user.username %></li>
-            <li class="btn btn-danger" >
-            <%= link_to "Log Out", "/logout" %>
-          </li>
-            
-        </ul>    
-        </div>  
-      
-        
-      <% else %>
-       <ul class="d-flex justify-content-end list-style-none">
-          <li class= 'nav-item btn btn-light mx-2' >
-            <%= link_to("Sign Up", new_user_path, class: 'text-decoration-none') %>
-          </li>
-           <li class= 'nav-item btn btn-light' >
-            <%= link_to("Log In", "/login", class: 'text-decoration-none') %>
-          </li>
-        </ul>
-      <% end %>
+
+      <%= app_nav(current_user) %>
     </div>
   </div>
 </nav>
