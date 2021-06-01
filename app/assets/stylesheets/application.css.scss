@@ -13,16 +13,16 @@
  *= require_tree .
  *= require_self
  */
- $color: #a8a8a8;
- $color2: #5fbf23;
- $color3: #3778c2;
+$color: #a8a8a8;
+$color2: #5fbf23;
+$color3: #3778c2;
 
- body {
+body {
   background-color: #f1f3f2;
 }
 
 .total {
- display: flex;
+  display: flex;
   justify-content: space-between;
   background-color: #fff;
   padding: 1.5rem;
@@ -40,11 +40,9 @@
   background-color: $color3;
 }
 
-
 .white {
   color: white !important;
 }
-
 
 .group-img {
   width: 100%;
