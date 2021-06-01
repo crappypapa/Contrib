@@ -6,8 +6,8 @@ ruby '3.0.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
 gem 'jquery-rails'
+gem 'pg', '~> 1.1'
 gem 'twitter-bootstrap-rails'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
@@ -36,7 +36,6 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-erd'
   gem 'rspec-rails'
-
 end
 
 group :development do
