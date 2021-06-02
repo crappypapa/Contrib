@@ -20,10 +20,10 @@ module ApplicationHelper
   end
 
   def status(group)
-    stat = group.contributions.sum {|contribution| contribution.amount}
-    if stat >= 100000
+    stat = group.contributions.sum(&:amount)
+    if stat >= 100_000
       "<p class='font-weight-bold text-danger'>Rating: Expensive</p>".html_safe
-    elsif stat >= 10000
+    elsif stat >= 10_000
       "<p class='font-weight-bold text-success'>Rating: Medium</p>".html_safe
     else
       "<p class='font-weight-bold'>Rating: Cheap </p>".html_safe

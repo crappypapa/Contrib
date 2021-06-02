@@ -4,17 +4,21 @@ class ContributionsController < ApplicationController
   def index
     return if current_user.contributions.size.zero?
 
-    @contributions =  if params[:image]
-                        current_user.contributions.includes(:groups).desc
-                      else
-                        current_user.contributions.includes(:groups).desc.select { |contribution| contribution.groups.exists? }
-                      end
+    @contributions = if params[:image]
+                       current_user.contributions.includes(:groups).desc
+                     else
+                       current_user.contributions.includes(:groups).desc.select do |contribution|
+                         contribution.groups.exists?
+                       end
+                     end
   end
 
   def ungrouped
     return if current_user.contributions.size.zero?
 
-    @contributions = current_user.contributions.includes(:groups).desc.reject { |contribution| contribution.groups.exists? }
+    @contributions = current_user.contributions.includes(:groups).desc.reject do |contribution|
+      contribution.groups.exists?
+    end
   end
 
   def new
