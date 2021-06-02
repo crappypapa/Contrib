@@ -1,0 +1,29 @@
+<% content_for(:title, "All Groups") %>
+
+
+<% @group.contributions.each do |contribution| %>
+    <div class="col">
+      <div class="card text-white bg-dark h-100">
+        <div class="col-md-5">
+          <%= show_image(contribution)%>
+          <div class="col-md-7">
+          <div class="card-body">
+            <h3>Title: <%= contribution.name %></h3>
+            <p class= 'card-title'> Author: <%= contribution.author.username %></p>
+            <p class="card-text">Amount: <%= contribution.amount %></p>
+          
+            <p class="card-text"><small class="text-muted">Created on: <%= contribution.created_at.day %>-<%= contribution.created_at.month %>-<%= contribution.created_at.year %> </small></p>
+          </div>
+        </div>
+      </div>
+    </div>  
+    </div>
+      <% end %>
+  </div>
+</div>
+</div>
+
+
+<div class=" row text-center btn-background">
+    <%= link_to 'ADD CONTRIBUTION', new_contribution_path, class: "col-sm-12  button text-center" %>
+</div>

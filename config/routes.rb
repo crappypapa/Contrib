@@ -1,3 +1,13 @@
+
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  root 'landing#index'
+  resources :users, only: %i[create new]
+  resources :contributions, only: %I[index new create]
+  resources :groups, only: %I[index new create show]
+  
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  get 'logout', to: 'sessions#destroy'
+  get 'ungrouped', to: 'contributions#ungrouped'
 end
